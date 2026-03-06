@@ -1,5 +1,16 @@
 // API service module for frontend
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001';
+const LOCAL_API_URL = 'http://localhost:5001';
+const RENDER_API_URL = 'https://nextwave-studio.onrender.com';
+const configuredApiUrl = process.env.REACT_APP_API_URL || LOCAL_API_URL;
+
+const isLocalHost = (host) => host === 'localhost' || host === '127.0.0.1' || host === '::1';
+const isLoopbackUrl = (url) => /^https?:\/\/(localhost|127\.0\.0\.1|\[::1\])(?::\d+)?/i.test(url || '');
+
+const API_URL =
+  typeof window !== 'undefined' && !isLocalHost(window.location.hostname) && isLoopbackUrl(configuredApiUrl)
+    ? RENDER_API_URL
+    : configuredApiUrl;
+
 const toJsonOrThrow = async (r, fallbackMessage) => {
   const body = await r.json();
   if (!r.ok) throw new Error(body?.error || fallbackMessage);
