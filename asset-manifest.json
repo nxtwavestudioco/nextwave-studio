@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/nextwave-studio/static/css/main.43f10a0c.css",
+    "main.js": "/nextwave-studio/static/js/main.b8cdf34a.js",
+    "static/js/894.c48a8ff1.chunk.js": "/nextwave-studio/static/js/894.c48a8ff1.chunk.js",
+    "static/js/239.1023181d.chunk.js": "/nextwave-studio/static/js/239.1023181d.chunk.js",
+    "static/js/213.7e7d7345.chunk.js": "/nextwave-studio/static/js/213.7e7d7345.chunk.js",
+    "static/js/455.5c33f7db.chunk.js": "/nextwave-studio/static/js/455.5c33f7db.chunk.js",
+    "index.html": "/nextwave-studio/index.html",
+    "main.43f10a0c.css.map": "/nextwave-studio/static/css/main.43f10a0c.css.map",
+    "main.b8cdf34a.js.map": "/nextwave-studio/static/js/main.b8cdf34a.js.map",
+    "894.c48a8ff1.chunk.js.map": "/nextwave-studio/static/js/894.c48a8ff1.chunk.js.map",
+    "239.1023181d.chunk.js.map": "/nextwave-studio/static/js/239.1023181d.chunk.js.map",
+    "213.7e7d7345.chunk.js.map": "/nextwave-studio/static/js/213.7e7d7345.chunk.js.map",
+    "455.5c33f7db.chunk.js.map": "/nextwave-studio/static/js/455.5c33f7db.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43f10a0c.css",
+    "static/js/main.b8cdf34a.js"
+  ]
+}
