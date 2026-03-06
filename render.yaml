@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: nextwave-studio-api
+    env: node
+    rootDir: server
+    buildCommand: npm ci
+    startCommand: npm start
+    autoDeploy: true
