@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Plus, Trash2, CheckCircle, Clock, Download, Send, Pencil } from 'lucide-react';
 import { jsPDF } from 'jspdf';
 
-const COMPANY_LOGO = '/image/NW-Logo.png';
+const COMPANY_LOGO = `${process.env.PUBLIC_URL}/image/NW-Logo.png`;
 const toOrdinal = (n) => {
   const v = n % 100;
   if (v >= 11 && v <= 13) return `${n}th`;

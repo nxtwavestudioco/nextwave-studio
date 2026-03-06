@@ -5,7 +5,8 @@ import { Menu, X, Lock, Unlock } from 'lucide-react';
 const Navbar = ({ isAdmin, onAdminToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [logoSrc, setLogoSrc] = useState('/image/NW-Logo.png');
+  const baseLogoPath = `${process.env.PUBLIC_URL}/image/NW-Logo.png`;
+  const [logoSrc, setLogoSrc] = useState(baseLogoPath);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -16,7 +17,7 @@ const Navbar = ({ isAdmin, onAdminToggle }) => {
   useEffect(() => {
     const img = new Image();
     img.crossOrigin = 'anonymous';
-    img.src = '/image/NW-Logo.png';
+    img.src = baseLogoPath;
     img.onload = () => {
       const canvas = document.createElement('canvas');
       canvas.width = img.width;
@@ -37,7 +38,7 @@ const Navbar = ({ isAdmin, onAdminToggle }) => {
       ctx.putImageData(image, 0, 0);
       setLogoSrc(canvas.toDataURL('image/png'));
     };
-  }, []);
+  }, [baseLogoPath]);
 
   const navLinks = [
     { name: 'Home', href: '#home' },
